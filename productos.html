@@ -3,43 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decoración de Interiores</title>
     <link rel="stylesheet" href="estilos.css">
+    <title>Decoración de Interiores</title>
 </head>
 <body>
     <header>
-        <img src="Buying Decors.jpeg" alt="Compras" class="imagen">
-        <div>
-            <nav id="navbar">
+        <div id="ProductBanner">
+            <img src="Buying Decors.jpeg" alt="Compras" class="ImagenHeader">
+        </div>
+        <div class="navbar">
+            <nav>
+                <input type="checkbox" id="menu">  
+                <label for="menu"> ☰ </label>
                 <ul>
-                    <li style="float:left"><a href="index.html">Home</a></li>
-                    <li><a href="nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="productos.html">Conoce nuestros productos y servicios</a></li>
-                    <li><a href="contacto.html">Contactanos</a></li>
+                    <li><a href="index.html" class="Boton">Home</a></li>
+                    <li><a href="nosotros.html" class="Boton">Sobre nosotros</a></li>
+                    <li><a href="productos.html" class="Boton">Productos y servicios</a></li>
+                    <li><a href="contacto.html" class="Boton">Contactanos</a></li>
+                
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <br><h2>¿Qué ofrecemos?</h2>
-        <p>
-            <ul id="Productos">
-                <li>Muebles</li>
-                <li>Cortinas</li>
-                <li>Alfombras</li>
-                <li>Lámparas</li>
-                <li>Accesorios</li>
-            </ul>
-            <ul id="Servicios">
-                <li>Servicio de asesoramiento</li>
-                <li>Servicio de diseño a medida</li>
-                <li>Servicio de diseño sorpresa completo</li>
-            </ul>
-        </p>
+
+        <div>
+            <br><h2 style="text-align: center;" class="Subtitulo">¿Qué ofrecemos?</h2>
+        </div>
+        <div class="ValorContenedor">
+            <div class="ImagenValor">
+                <img src="Decors.jpg" alt="Decoracion" class="ImagenMision">
+            </div>
+            <div class="ImagenValor">
+                <img src="Asesoramiento.jpg" alt="Asesoramiento" class="ImagenMision">
+            </div>
+        </div>
+        <div class="ValorContenedor">
+            <div>
+                <h2 class="Subtitulo">Explora Nuestros Productos</h2>
+            </div>
+            <div>
+                <h2 class="Subtitulo">Explora Nuestros Servicios</h2>
+            </div>
+        </div>
+        <div class="ValorContenedor">
+            <div>
+                <ul id="Productos">
+                    <li>Muebles</li>
+                    <li>Cortinas</li>
+                    <li>Alfombras</li>
+                    <li>Lámparas</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+            <div>
+                <ul id="Servicios">
+                    <li>Servicio de asesoramiento</li>
+                    <li>Servicio de diseño a medida</li>
+                    <li>Servicio de diseño sorpresa completo</li>
+                </ul>
+            </div>
+        </div>
+        
+
     </main>
 
-    <footer>
+    <footer class="footer">
         <br><h3 style="text-align: center;"><em>En el lienzo de tu hogar, cada mueble es una pincelada, cada detalle una historia. Diseña con pasión, vive con estilo.</em></h3>
         <h4 style="text-align: center;"><em>Todos los derechos reservados.</em></h4>
     </footer>

@@ -1,144 +1,345 @@
-.imagen{
-    width: 100%;
-  height: auto;
-    opacity: 0.9;
-    background:lightgray 50% / cover no-repeat;
+/* Sacamos la configuracion por defecto que nos puede traer la plantilla HTML */
+html{height: 100%;}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#HomeButton{
-    float: left;
-}
-.boton{
-    float: right;
-}
-.slogan{
-    position:relative;
-    display: flex;
-    width: auto;
-    height: 0px;
-flex-direction: column;
-justify-content: center;
-flex-shrink: 0;
-    
-color: #BF6A6A;
 
-text-align: center;
-text-shadow: 0px 8px 5px rgba(0, 0, 0, 0.50);
-font-family: JejuMyeongjo;
-font-size: 48px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-body{
+/* Agrego el color de fondo de mi pagina */
+body {
     background: #F0F0F0;
 }
-input{
-    border-radius: 10px;
-background: #D9D9D9;
+#menu{
+    display: none;
 }
-h2{
-    color: #000;
-
-text-align:left;
-text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: Radley;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-h4{
-    color: #000;
-text-align: center;
-font-family: Radley;
-font-size: 20px;
-font-style: italic;
-font-weight: 400;
-line-height: normal;
-}
-p{
-    color: #000;
-
-text-align: center;
-font-family: Radley;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-ol{
+#icono-hamburguesa{
     
-        color: #000;
-    
-    text-align: center;
-    font-family: Radley;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    
+    display: none;
 }
-#Productos{
-        color: #000;
-    font-family: Radley;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-#Servicios{
-    color: #000;
-font-family: Radley;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-h3{
-    opacity: 0.95;
-color: #000;
-text-align: center;
-font-family: Radley;
-font-size: 24px;
-font-style: italic;
-font-weight: 400;
-line-height: normal;
-}
-#navbar{
-    opacity:0.9;
-	position: fixed;
-  top: 0;
-  width: 100%;
-	background:rgba(72.25,72.25,72.25,1);
+/* Controla si se accede a la version mobile */
+@media(max-width: 700px) {
+    #icono-hamburguesa {
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: cadetblue;
+   
+         }
+         #icono-hamburguesa:hover{
+            background: grey;
+        }
+        #menu:checked  ~ ul{
+                display:block;
+        }
+              
+        #menu:checked ~ #icono-hamburguesa {
+                  background: lightgrey;
+                      }
+        
+    li{
+            margin: 0px;
+            text-align: left;
+            color: #000;
+        }
+    .navbar ul li{
+            display: none;
+            background: rgba(72.25, 72.25, 72.25, 1);
+           }
 
-  }
-
-  #navbar ul{
-    position: relative;
+    .ImagenValor{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+    
+}
+/* Estilo de mi navbar */
+.navbar {
+    position: fixed;
     top: 0;
     width: 100%;
-    height: 134px;
+    background: rgba(72.25, 72.25, 72.25, 1);
+}
+/* Disposicion del navbar */
+.navbar ul{
     display: flex;
+    height: 90px;
+    top: 0;
+    width: 100%;
     align-items: center;
-   }
-  #navbar ul li{
+    justify-content: space-around;
+}
+/* Estilo de cada list item */
+.navbar ul li {
     display: flex;
-    width: 149px;
+    width: 200px;
     height: 52px;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
 
     color: #FFF;
-font-family: JejuMyeongjo;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: JejuMyeongjo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
-  }
+}
+/* Ubicacion del boton Home */
+.HomeButton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    width: auto;
+}
+/* Ubicacion de los botones de la derecha */
+.UsefulButtons{
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: auto;
+    text-align: center;
+}
+/* Estilo y disposicion de cada boton */
+.Boton{
+    margin-left: 5px;
+    padding: 8px 5px;
+}
+/* Estilo del texto de los botones */
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Radley;
+}
 
-  #navbar ul li a{
-        color: white;
-        text-decoration: none;
-      }
+/* Relacionado a foto del banner */
+
+#IndexBanner{
+    padding: 90px 0px 0px 0px;
+    width: 100%;
+    height: 500px;
+}
+.ImagenHeader{
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Slogan */
+
+#SloganDiv{
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 0px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 50px;
+}
+#Slogan{
+    color: #BF6A6A;
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.50);
+    font-family: JejuMyeongjo;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Cuerpo del Home */
+#CuerpoIndex{
+    padding: 10px 0px;
+}
+/* Disposicion de subtitulo y texto */
+#TituloCuerpo{
+    padding: 20px 80px;
+}
+#TextoCuerpo{
+    padding: 10px 150px;
+}
+
+/* Estilo general para los <p> */
+.ParagraphText{
+    padding: 10px 10px;
+    color: #000;
+    text-align: left;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Estilo general para los <h2> */
+.Subtitulo{
+    color: #000;
+    text-align: left;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Radley;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#ContenedorMain{
+    padding: 150px 0px 0px 0px;
+}
+.ValorContenedor{
+    display: flex;
+    justify-content: space-around;
+}
+.Valor{
+    width: 50%;
+    height: auto;
+}
+.ImagenValor{
+    padding: 90px 0px 0px 0px;
+    width: 35%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.ImagenMision{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+.ImagenVision{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+.ImagenValores{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+#ProductBanner{
+    width: 100%;
+    height: 700px;
+}
+#ContactBanner{
+    width: 100%;
+    height: 700px;
+}
+.ContactoContenedor{
+    padding: 30px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.Icono{
+    width: 3%;
+    height: auto;
+}
+.TextoForm{
+    width: 100%;
+}
+
+#CuerpoContacto{
+    padding: 3%;
+}
+#FormularioContacto{
+    padding: 3%;
+}
+label{
+    color: #000;
+    text-align: left;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+input{
+    color: #000;
+    text-align: left;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Estilo de los campos a completar por el usuario */
+input {
+    border-radius: 10px;
+    background: #D9D9D9;
+}
+
+#BotonSubmit{
+    width: 5%;
+    border-radius: 10px;
+    background: #2B87BB;
+    text-align: center;
+}
+
+h4 {
+    color: #000;
+    text-align: center;
+    font-family: Radley;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+ol {
+    padding: 10px 10px;
+    color: #000;
+    text-align: left;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#Productos {
+    color: #000;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#Servicios {
+    color: #000;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3 {
+    opacity: 0.95;
+    color: #000;
+    text-align: center;
+    font-family: Radley;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Estilo y disposicion del Footer */
+.footer{
+    width: 100%;
+    height: 30px;
+    position: relative;
+    padding: 25px 20px 0px 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}

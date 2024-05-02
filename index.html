@@ -3,39 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decoración de Interiores</title>
     <link rel="stylesheet" href="estilos.css">
+    <title>Decoración de Interiores</title>
 </head>
 <body>
     <header>
-        <div>
-        <img src="Diseño Banner.webp" alt="Imagen Home" class="imagen">
-        <h1 class="slogan">Transforma tus espacios, inspira tu vida</h1>    
-        </div>
-        <div>
-            <nav id="navbar">
+        <div class="navbar">
+            <nav>
+                <input type="checkbox" id="menu">  
+                <label for="menu" id="icono-hamburguesa"> ☰ </label>
                 <ul>
-                    <li><a href="index.html" id="HomeButton">Home</a></li>
+                    <li><a href="index.html" class="Boton">Home</a></li>
                     <li><a href="nosotros.html" class="Boton">Sobre nosotros</a></li>
-                    <li><a href="productos.html" class="Boton">Conoce nuestros productos y servicios</a></li>
+                    <li><a href="productos.html" class="Boton">Productos y servicios</a></li>
                     <li><a href="contacto.html" class="Boton">Contactanos</a></li>
+                
                 </ul>
             </nav>
+        </div>
+        <div id="IndexBanner">
+            <img src="Diseño Banner.webp" alt="Imagen Home" class="ImagenHeader">   
+        </div>
+        <div id="SloganDiv">
+            <h1 id="Slogan">"Transforma tus espacios, inspira tu vida"</h1> 
         </div>
     </header>
 
     <main>
-        <br><h2>¿Por qué elegirnos?</h2>
-        <p>
-            En el mundo del diseño de interiores, la elección del equipo adecuado marca la diferencia entre un espacio ordinario y uno extraordinario.
-             En nuestra empresa, nos destacamos por nuestra experiencia consolidada y nuestra dedicación inquebrantable a ofrecer un servicio de calidad excepcional.
-        </p>
+        <div id="CuerpoIndex">
+            <h2 id="TituloCuerpo" class="Subtitulo">¿Por qué elegirnos?</h2>
+            <p id="TextoCuerpo" class="ParagraphText">
+                En el mundo del diseño de interiores, la elección del equipo adecuado marca la diferencia entre un espacio ordinario y uno extraordinario.
+                En nuestra empresa, nos destacamos por nuestra experiencia consolidada y nuestra dedicación inquebrantable a ofrecer un servicio de calidad excepcional.
+            </p>
+        </div>
+        
         
     </main>
 
-    <footer>
-        <br><h3 style="text-align: center;"><em>En el lienzo de tu hogar, cada mueble es una pincelada, cada detalle una historia. Diseña con pasión, vive con estilo.</em></h3>
-        <h4 style="text-align: center;"><em>Todos los derechos reservados.</em></h4>
+    <footer class="footer">
+        <br><h3><em>En el lienzo de tu hogar, cada mueble es una pincelada, cada detalle una historia. Diseña con pasión, vive con estilo.</em></h3>
+        <h4><em>Todos los derechos reservados.</em></h4>
     </footer>
 </body>
 </html>

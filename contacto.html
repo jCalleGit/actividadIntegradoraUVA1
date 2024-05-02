@@ -8,36 +8,62 @@
 </head>
 <body>
     <header>
-        <img src="Contact Us.jpg" alt="Contacto" class="imagen">
-        <div>
-            <nav id="navbar">
+        <div id="ContactBanner">
+            <img src="Contact Us.jpg" alt="Contacto" class="ImagenHeader">
+        </div>
+        <div class="navbar">
+            <nav>
+                <input type="checkbox" id="menu">  
+                <label for="menu"> ☰ </label>
                 <ul>
-                    <li style="float:left"><a href="index.html">Home</a></li>
-                    <li><a href="nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="productos.html">Conoce nuestros productos y servicios</a></li>
-                    <li><a href="contacto.html">Contactanos</a></li>
+                    <li><a href="index.html" class="Boton">Home</a></li>
+                    <li><a href="nosotros.html" class="Boton">Sobre nosotros</a></li>
+                    <li><a href="productos.html" class="Boton">Productos y servicios</a></li>
+                    <li><a href="contacto.html" class="Boton">Contactanos</a></li>
+                
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <br><h2>¿Hay dudas? No dudes en contactarnos</h2>
-        <p>Podes enviarnos un mensaje al 15-4567-2908 <br>También podes contactarnos a través del siguiente formulario: </p>
-        <form action="">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
-            <label for="apellido">Apellido:</label><br>
-            <input type="text" id="apellido" name="apellido"><br><br>
-            <label for="descripcion">Descripción:</label><br>
-            <input type="text" id="descripcion" name="descripcion"><br><br>
-            <textarea id="consulta" name="consulta" rows="4" cols="50"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-        
+        <div id="CuerpoContacto">
+            <br><h2 class="Subtitulo">¿Hay dudas? No dudes en contactarnos</h2>
+            
+            <div class="ContactoContenedor">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="37" viewBox="0 0 39 37" fill="none" class="Icono">
+                    <path d="M19.5784 9.97057e-05C8.87789 9.97057e-05 0.156784 8.23258 0.156784 18.3336C0.156784 21.571 1.05829 24.716 2.74372 27.491L0 37L10.2889 34.447C13.1307 35.9085 16.3251 36.6855 19.5784 36.6855C30.2789 36.6855 39 28.453 39 18.3521C39 13.4496 36.9814 8.84308 33.3166 5.38358C31.5196 3.67069 29.3794 2.31253 27.0207 1.38827C24.6621 0.464002 22.1322 -0.00788684 19.5784 9.97057e-05ZM19.598 3.08959C23.9095 3.08959 27.9467 4.68059 31.004 7.56658C32.504 8.98279 33.6933 10.6644 34.5038 12.5152C35.3143 14.3659 35.73 16.3494 35.7271 18.3521C35.7271 26.751 28.4759 33.5775 19.5784 33.5775C16.6779 33.5775 13.8362 32.856 11.3668 31.45L10.7789 31.1355L4.66432 32.6525L6.29095 27.0285L5.89899 26.4365C4.28127 24.0101 3.42508 21.2005 3.42965 18.3336C3.44925 9.93457 10.6809 3.08959 19.598 3.08959ZM12.6995 9.86057C12.3859 9.86057 11.8568 9.97157 11.406 10.4341C10.9749 10.8966 9.701 12.0251 9.701 14.2636C9.701 16.5206 11.4452 18.6851 11.6608 18.9995C11.9352 19.314 15.11 23.939 19.9899 25.9C21.1462 26.3995 22.0477 26.677 22.7533 26.8805C23.9095 27.232 24.9678 27.1765 25.8106 27.0655C26.7513 26.936 28.6719 25.9555 29.0834 24.8825C29.495 23.8095 29.495 22.903 29.3774 22.6995C29.2402 22.5145 28.9266 22.4035 28.4367 22.2C27.9467 21.941 25.5558 20.831 25.1246 20.683C24.6739 20.535 24.3995 20.461 24.0271 20.905C23.7136 21.3675 22.7729 22.4035 22.4985 22.6995C22.2045 23.014 21.9301 23.051 21.4598 22.829C20.9502 22.5885 19.3824 22.1075 17.5402 20.5535C16.0899 19.3325 15.1296 17.8341 14.8357 17.3716C14.6005 16.9276 14.8161 16.6501 15.0513 16.4466C15.2668 16.2431 15.5804 15.9101 15.7764 15.6326C16.0312 15.3736 16.1095 15.1701 16.2663 14.8741C16.4231 14.5596 16.3447 14.3006 16.2271 14.0786C16.1095 13.8751 15.1296 11.5811 14.7181 10.6746C14.3261 9.78657 13.9342 9.89757 13.6206 9.87907C13.3462 9.87907 13.0327 9.86057 12.6995 9.86057Z" fill="black"/>
+                </svg>
+                <div class="TextoForm">
+                    <p class="ParagraphText">Podes enviarnos un mensaje al 15-4567-2908</p>
+                </div>
+            </div>
+            <div class="ContactoContenedor">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="37" viewBox="0 0 39 37" fill="none" class="Icono">
+                    <path d="M0 0H39V37H0V0ZM3.9 3.7V9.25H35.1V3.7H3.9ZM35.1 12.95H3.9V33.3H35.1V12.95ZM7.8 17.575H31.2V21.275H7.8V17.575ZM7.8 24.975H23.4V28.675H7.8V24.975Z" fill="black"/>
+                </svg>
+                <div class="TextoForm">
+                    <p class="ParagraphText">También podes contactarnos a través del siguiente formulario: </p>
+                </div>
+            </div>
+            
+        </div>
+        <div id="FormularioContacto">
+            <form action="" class="Formulario">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido"><br><br>
+                <label for="descripcion">Descripción:</label><br>
+                <input type="text" id="descripcion" name="descripcion"><br><br>
+                <textarea id="consulta" name="consulta" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Enviar" id="BotonSubmit">
+            </form>
+        </div>
+       
     </main>
 
-    <footer>
+    <footer class="footer">
         <br><h3 style="text-align: center;"><em>En el lienzo de tu hogar, cada mueble es una pincelada, cada detalle una historia. Diseña con pasión, vive con estilo.</em></h3>
         <h4 style="text-align: center;"><em>Todos los derechos reservados.</em></h4>
     </footer>
