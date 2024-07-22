@@ -9,33 +9,33 @@ html{height: 100%;}
 /* Agrego el color de fondo de mi pagina */
 body {
     background: #F0F0F0;
-}
-/* Controla si se accede a la version mobile */
-@media(max-width: 700px) {    
+    margin: 0;
+    padding: 0;
 }
 /* Estilo de mi navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(72.25, 72.25, 72.25, 1);
+    background-color: rgba(72.25, 72.25, 72.25, 1);
+    overflow: hidden;
 }
 /* Disposicion del navbar */
-.navbar ul{
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    height: 90px;
-    top: 0;
-    width: 100%;
-    align-items: center;
     justify-content: space-around;
 }
 /* Estilo de cada list item */
-.navbar ul li {
-    display: flex;
-    width: 200px;
-    height: 52px;
-    flex-direction: column;
-    justify-content: center;
+.nav-list li {
+    display: inline;
+}
+/* Estilo del texto de los botones */
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 
     color: #FFF;
     font-family: JejuMyeongjo;
@@ -43,8 +43,11 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
 }
+.nav-list li a:hover {
+    background-color: #111;
+}
+
 /* Ubicacion del boton Home */
 .HomeButton{
     position: absolute;
@@ -66,23 +69,40 @@ body {
     margin-left: 5px;
     padding: 8px 5px;
 }
-/* Estilo del texto de los botones */
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: Radley;
+
+
+/* Menu toggle styles */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
 }
 
 /* Relacionado a foto del banner */
 
 #IndexBanner{
-    padding: 90px 0px 0px 0px;
     width: 100%;
-    height: 500px;
+    height: 100%; /* Ajusta a la altura deseada */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative;
 }
 .ImagenHeader{
     width: 100%;
-    max-height: 100%;
+    height: 700px;
+    object-fit: cover; /* Asegura que la imagen cubra todo el div */
+    object-position: center; /* Centra la imagen */
 }
 
 /* Slogan */
@@ -144,7 +164,7 @@ body {
 #ContenedorMain{
     padding: 150px 0px 0px 0px;
 }
-.ValorContenedor{
+.ValorContenedor, .ValorContenedorUs{
     display: flex;
     justify-content: space-around;
 }
@@ -177,10 +197,14 @@ body {
 #ProductBanner{
     width: 100%;
     height: 700px;
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative;
 }
 #ContactBanner{
     width: 100%;
     height: 700px;
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative;
 }
 .ContactoContenedor{
     padding: 30px 0px 0px 0px;
@@ -293,4 +317,50 @@ h3 {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+}
+/* Controla si se accede a la version mobile */
+@media screen and (max-width: 700px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-list {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-list li {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-list li a {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+    .ParagraphText{
+        text-align: justify;
+    }
+    .ValorContenedorUs {
+        flex-direction: column;
+    }
+    .Valor, .ImagenValor {
+        width: 100%; /* Asegura que ambos divs ocupen el 100% del ancho del contenedor */
+        padding: 20px;
+    }
+
+    .ImagenValor img {
+        width: 80%; /* Asegura que la imagen se ajuste al ancho del div */
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
